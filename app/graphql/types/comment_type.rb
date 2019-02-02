@@ -1,4 +1,4 @@
-class CommentType < GraphQL::Schema::Object
+class CommentType < Types::BaseObject
   field :id, ID, null: true
   field :post, PostType, null: false
   field :body, String, null: false

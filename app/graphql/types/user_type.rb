@@ -1,4 +1,4 @@
-class UserType < GraphQL::Schema::Object
+class UserType < Types::BaseObject
   field :id, ID, null: true
   field :name, String, null: false
   field :username, String, null: false

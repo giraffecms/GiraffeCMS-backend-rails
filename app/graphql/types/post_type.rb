@@ -1,4 +1,4 @@
-class PostType < GraphQL::Schema::Object
+class PostType < Types::BaseObject
   field :id, ID, null: true
   field :title, String, null: false
   field :body, String, null: false
