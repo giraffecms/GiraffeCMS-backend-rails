@@ -1,10 +1,9 @@
-class PostType < Types::BaseObject
-  field :id, ID, null: true
-  field :title, String, null: false
-  field :body, String, null: false
-  field :author, UserType, null: false
-  field :comments, [CommentType], null: true
-  field :createdAt, Time, null: false
-  field :updatedAt, Time, null: true
-  field :deletedAt, Time, null: true
+module Types
+	class PostType < Types::BaseObject
+	  field :id, ID, null: true
+	  field :title, String, null: false
+	  field :body, String, null: false
+	  field :created_at, Time, null: false
+	  field :updated_at, Time, null: true
+	end
 end
