@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'graphql', '~> 1.8.13'
+gem 'graphql', '~> 1.8', '>= 1.8.13'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.5'
@@ -28,3 +28,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
