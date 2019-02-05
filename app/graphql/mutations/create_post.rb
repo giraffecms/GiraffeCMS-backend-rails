@@ -6,7 +6,14 @@ module Mutations
 		type Types::PostType
 
 		def resolve(title: nil, body: nil)
-			Post.create!(title: title, body: body)
+			post = Post.create!(title: title, body: body)
+			{
+				id: post.id,
+				title: post.title,
+				body: post.body,
+				created_at: post.created_at,
+				updated_at: post.updated_at,
+			}
 		end
 	end
 end
