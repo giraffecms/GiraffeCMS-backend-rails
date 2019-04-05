@@ -19,6 +19,8 @@ group :test do
 	gem 'shoulda-matchers', '~> 3.1', '>= 3.1.3'
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'database_cleaner', '~> 1.7'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
 
 group :development do
