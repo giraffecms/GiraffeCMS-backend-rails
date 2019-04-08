@@ -9,6 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'graphql', '~> 1.8', '>= 1.8.13'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'jwt', '~> 2.1'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.5'
