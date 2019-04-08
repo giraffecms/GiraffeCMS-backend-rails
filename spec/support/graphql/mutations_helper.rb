@@ -1,6 +1,6 @@
 module GraphQL
 	module MutationsHelper
-		def create_post_mutation(input = {})
+		def create_post_mutation
 			%(
 				mutation CreatePost(
 					$title: String!,
@@ -14,6 +14,29 @@ module GraphQL
 							id
 							title
 							body
+						}
+						errors
+					}
+				}
+			)
+		end
+
+		def create_user_mutation
+			%(
+				mutation CreateUser(
+					$username: String!,
+					$email: String!,
+					$password: String!,
+				) {
+					createPost(input: {
+						username:$username,
+						email:$email,
+						password:$password,
+					}) {
+						user {
+							id
+							username
+							email
 						}
 						errors
 					}

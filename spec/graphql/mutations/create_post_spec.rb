@@ -5,7 +5,7 @@ RSpec.describe 'createPost mutation', type: :request do
 		before do
 			post('/graphql', params: {
 			 query: create_post_mutation,
-			 variables: create_post_mutation_variables(input_variables)
+			 variables: mutation_variables(:post, input_variables)
 			})
 		end
 

@@ -1,7 +1,7 @@
 module GraphQL
 	module MutationVariables
-		def create_post_mutation_variables(input = {})
-			attributes = attributes_for(:post)
+		def mutation_variables(factory, input = {})
+			attributes = attributes_for(factory)
 
 			input.reverse_merge!(attributes)
 
