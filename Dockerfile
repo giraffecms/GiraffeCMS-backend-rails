@@ -17,6 +17,8 @@ WORKDIR /giraffecms
 COPY Gemfile /giraffecms/Gemfile
 COPY Gemfile.lock /giraffecms/Gemfile.lock
 RUN bundle install --jobs `expr $(cat /proc/cpuinfo | grep -c "cpu cores") - 1` --retry 3
+RUN gem install pg
 
 COPY . /giraffecms
+COPY ./config/database.yml.docker /giraffecms/config/database.yml
 EXPOSE 3000

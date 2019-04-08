@@ -24,3 +24,6 @@
 
 # Test coverage from simplecov
 coverage
+
+# Database files
+db/*.sqlite3

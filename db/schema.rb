@@ -12,11 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2019_04_06_174526) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "comments", force: :cascade do |t|
-    t.bigint "post_id"
+    t.integer "post_id"
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false
@@ -41,5 +38,4 @@ ActiveRecord::Schema.define(version: 2019_04_06_174526) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "comments", "posts"
 end
