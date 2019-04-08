@@ -16,7 +16,7 @@ RSpec.describe 'createUser mutation', type: :request do
 			end
 
 			it 'returns no errors' do
-				errors = json["data"]["createuser"]["errors"]
+				errors = json["data"]["createUser"]["errors"]
 				expect(errors).to eq([])
 			end
 
@@ -26,7 +26,7 @@ RSpec.describe 'createUser mutation', type: :request do
 				let(:input_variables) { {"username": username, "email": email} }
 
 				it 'returns username' do
-					user_name = json["data"]["createUser"]["user"]["name"]
+					user_name = json["data"]["createUser"]["user"]["username"]
 					expect(user_name).to eq(username)
 				end
 

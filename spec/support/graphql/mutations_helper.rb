@@ -28,7 +28,7 @@ module GraphQL
 					$email: String!,
 					$password: String!,
 				) {
-					createPost(input: {
+					createUser(input: {
 						username:$username,
 						email:$email,
 						password:$password,
