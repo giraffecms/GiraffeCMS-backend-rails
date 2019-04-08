@@ -1,5 +1,4 @@
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
@@ -14,8 +13,6 @@ rvm:
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rspec
-services:
-  - postgresql
 env:
   global:
     - CC_TEST_REPORTER_ID=dd181c338c65fa186548bfac41aeb24c4ef2eb2abe9430350672031a086f7c13
