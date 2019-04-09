@@ -1,3 +1,5 @@
+require_relative '../../lib/json_web_token.rb' # for some reason (prolly import-related) tests will run without it, but app won't work
+
 class GraphqlController < ApplicationController
   def execute
     variables = ensure_hash(params[:variables])
