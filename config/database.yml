@@ -1,18 +1,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
 
 development:
   <<: *default
-  host: db
-  username: postgres
-  password:
   database: gfcms-dev
+  password:
 
 test:
   <<: *default
-  host: db
-  username: postgres
-  password:
   database: gfcms-test
+  password:
