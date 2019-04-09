@@ -44,5 +44,22 @@ module GraphQL
 				}
 			)
 		end
+
+		def login_mutation
+			%(
+				mutation Login(
+					$email: String!,
+					$password: String!,
+				) {
+					login(input: {
+						email:$email,
+						password:$password,
+					}) {
+						token,
+						errors,
+					}
+				}
+			)
+		end
 	end
 end
