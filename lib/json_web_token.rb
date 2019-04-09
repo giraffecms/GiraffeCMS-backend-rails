@@ -1,10 +1,9 @@
 class JsonWebToken
-	SECRET = Rails.application.credentials.secret_key_base
+	SECRET = Rails.application.credentials.jwt
 	ALGORITHM = 'HS256'
 
 	class << self
 		def encode(payload, exp = 15.minutes.from_now)
-			puts SECRET
 			payload[:exp] = exp.to_i
 
 			JWT.encode(payload, SECRET, ALGORITHM)
