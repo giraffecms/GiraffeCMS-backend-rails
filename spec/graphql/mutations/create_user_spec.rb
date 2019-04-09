@@ -35,6 +35,16 @@ RSpec.describe 'createUser mutation', type: :request do
 					expect(user_email).to eq(email)
 				end
 			end
+
+			describe 'jwt' do
+				it 'returns valid token' do
+					token = json["data"]["createUser"]["token"]
+					id = json["data"]["createUser"]["user"]["id"]
+					decoded_token = JsonWebToken.decode(token)
+
+					expect(decoded_token["user_id"].to_s).to eq(id)
+				end
+			end
 		end
 
 		context 'when input is invalid' do

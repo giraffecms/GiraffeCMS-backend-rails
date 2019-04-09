@@ -10,7 +10,7 @@ class JsonWebToken
 		end
 
 		def decode(token)
-			body = JWT.decode(token, SECRET, true, { algorithm: ALGORITHM})
+			body = JWT.decode(token, SECRET, true, { algorithm: ALGORITHM})[0]
 		end
 	end
 end
