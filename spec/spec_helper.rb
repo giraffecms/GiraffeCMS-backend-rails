@@ -1,9 +1,11 @@
 require 'simplecov'
 require 'simplecov-console'
+require 'codacy-coverage'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   SimpleCov::Formatter::Console,
+  Codacy::Formatter,
 ])
 
 SimpleCov.start do
