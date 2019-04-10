@@ -23,6 +23,7 @@ group :test do
   gem 'database_cleaner', '~> 1.7'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'codacy-coverage', :require => false
 end
 
 group :development do
