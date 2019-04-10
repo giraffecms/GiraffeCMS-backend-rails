@@ -5,10 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: gfcms-dev
+  host: db
+  username: postgres
   password:
+  database: gfcms-dev
 
 test:
   <<: *default
-  database: gfcms-test
+  host: db
+  username: postgres
   password:
+  database: gfcms-test

@@ -8,6 +8,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'graphql', '~> 1.8', '>= 1.8.13'
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'jwt', '~> 2.1'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.5'
@@ -27,8 +29,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'graphiql-rails'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'graphiql-rails', group: :development
