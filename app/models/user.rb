@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :comments
   has_and_belongs_to_many :posts
 
   before_save { self.email.downcase }

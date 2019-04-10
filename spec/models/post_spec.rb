@@ -14,5 +14,6 @@ RSpec.describe Post, type: :model do
 
 	describe 'associations' do
 		it { should have_many(:comments).dependent(:destroy) }
+		it { should have_and_belong_to_many(:users) }
 	end
 end
