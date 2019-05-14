@@ -30,7 +30,7 @@ However, if you want to know more about encrypted credentials you can visit for 
 
 Required file structrue looks like following:
 ~~~~yml
-secret_key_base:<base secret key>
+secret_key_base: 	<base secret key>
 jwt: <secret key used to encode JWT>
 ~~~~
 You can generate a pseudorandom string with:
