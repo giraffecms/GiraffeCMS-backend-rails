@@ -6,7 +6,7 @@
 # GiraffeCMS Backend
 GiraffeCMS is a simple headless CMS for blogging, written in Ruby on Rails. Unlike most of CMS's, Giraffe uses GraphQL instead of typical RESTful api.
 
-Work under application is currently in progress, so it is not ready to work on production enviroment, as well as it has not implemented important features. All important relases should be aviable via tags in the future.
+Work on application is currently in progress, so it is not ready to work in production environment, as well as it has not implemented important features. All important relases should be available via tags in the future.
 
 ## Installation
 ### Prerequisites:
@@ -22,11 +22,11 @@ Next you have to setup the database
 ~~~~shell
 rails db:setup
 ~~~~
-Because the app is using JWT it needs to have a secret key for its encoding. Probably, in current version of the application deleting file credentails.yml.enc may be required. Then, you need to fill rails credentails with valid data. You should be able to do it with command
+Because the app is using JWT it needs to have a secret key for its encoding. Probably, in the current version of the application deleting file credentails.yml.enc may be required. Then, you need to fill rails credentails with valid data. You should be able to do it with command
 ~~~~shell
 EDITOR="vim" bin/rails credentials:edit
 ~~~~
-however, if you want to know more about encrypted credentials you can visit for example [this blog post about it](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2).
+However, if you want to know more about encrypted credentials you can visit for example [this blog post about it](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2).
 
 Required file structrue looks like following:
 ~~~~yml
@@ -50,7 +50,7 @@ To run tests using generated rspec binstub you need to use command
 ~~~~shell
 rspec
 ~~~~
-however, if your enviroment is different than test you may need to make setup for test database.
+However, if your envirnoment is different than test you may need to make setup for test database.
 ~~~~shell
 rails db:setup RAILS_ENV=test
 ~~~~
@@ -64,7 +64,7 @@ Currently GiraffeCMS has not typical documentation. However, you should be able 
 * [GraphiQL](https://github.com/graphql/graphiql)
 
 # Contributing
-I appreciate every help with the project. Feel free to make pull requests, add issues, or contact me other way to propose changes.
+I appreciate every help with the project. Feel free to make pull requests, add issues, or contact me other way to suggest changes.
 
 # About
 
