@@ -66,7 +66,7 @@ module GraphQL
 			)
 		end
 
-		def create_post_mutation
+		def create_comment_mutation
 			%(
 				mutation CreateComment(
 					$post_id: Int!,
@@ -94,7 +94,6 @@ module GraphQL
 					}
 				}
 			)
-		end
 		end
 	end
 end
