@@ -6,13 +6,12 @@ RSpec.describe 'createPost mutation', type: :request do
 			post('/graphql', params: {
 			 query: create_post_mutation,
 			 variables: mutation_variables(:post, input_variables),
-			 headers: headers
-			})
+			}, headers: headers)
 		end
 
 		context 'when user is admin' do
 			let!(:user) { create(:admin) }
-			let(:headers) { valid_headers }
+			let(:headers) { valid_auth_headers }
 
 			context 'when input is valid' do
 				let(:input_variables) { {} }
@@ -76,6 +75,11 @@ RSpec.describe 'createPost mutation', type: :request do
 			it 'returns error' do
 				errors = json["data"]["createPost"]["errors"]
 				expect(errors).not_to eq("You are not allowed to create posts")
+			end
+
+			it 'does not return post' do
+				post = json["data"]["createPost"]["post"]
+				expect(post).to be_nil
 			end
 		end
 	end

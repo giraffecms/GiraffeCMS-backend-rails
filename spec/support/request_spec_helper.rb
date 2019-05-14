@@ -7,10 +7,9 @@ module RequestSpecHelper
 		JsonWebToken.encode(user_id: user_id)
 	end
 
-	def valid_headers
+	def valid_auth_headers
 		{
       'Authorization' => token_generator(user.id),
-      'Content-Type' => 'application/json'
     }
 	end
 end
