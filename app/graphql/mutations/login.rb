@@ -1,4 +1,4 @@
-module Mutations::User
+module Mutations
 	class Login < Mutations::BaseMutation
 		argument :email, String, required: true
 		argument :password, String, required: true

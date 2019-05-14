@@ -1,4 +1,4 @@
-module Mutations::Post
+module Mutations
 	class CreatePost < Mutations::BaseMutation
 		argument :title, String, required: true
 		argument :body, String, required: true
