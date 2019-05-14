@@ -16,9 +16,6 @@ RSpec.describe 'createPost mutation', type: :request do
 
 			context 'when input is valid' do
 				let(:input_variables) { {} }
-				it 'returns code 200' do
-					expect(response).to have_http_status(200)
-				end
 
 				it 'returns no errors' do
 					errors = json["data"]["createPost"]["errors"]
