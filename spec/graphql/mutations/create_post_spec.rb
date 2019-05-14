@@ -37,6 +37,11 @@ RSpec.describe 'createPost mutation', type: :request do
 							post_body = json["data"]["createPost"]["post"]["body"]
 							expect(post_body).to eq(body)
 						end
+
+						it 'returns post author' do
+							author = json["data"]["createPost"]["post"]["authors"].first
+							expect(author["username"]).to eq(user.username)
+						end
 					end
 				end
 
