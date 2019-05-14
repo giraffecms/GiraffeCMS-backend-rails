@@ -65,5 +65,36 @@ module GraphQL
 				}
 			)
 		end
+
+		def create_post_mutation
+			%(
+				mutation CreateComment(
+					$post_id: Int!,
+					$title: String!,
+					$body: String!,
+				) {
+					createComment(input: {
+						post_id:$post_id,
+						title:$title,
+						body:$body,
+					}) {
+						comment {
+							id
+							title
+							body
+							author {
+								id
+								username
+							}
+							post {
+								id
+							}
+						}
+						errors
+					}
+				}
+			)
+		end
+		end
 	end
 end
