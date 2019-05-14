@@ -69,12 +69,12 @@ module GraphQL
 		def create_comment_mutation
 			%(
 				mutation CreateComment(
-					$post_id: Int!,
+					$post: Int!,
 					$title: String!,
 					$body: String!,
 				) {
 					createComment(input: {
-						post_id:$post_id,
+						post:$post,
 						title:$title,
 						body:$body,
 					}) {
