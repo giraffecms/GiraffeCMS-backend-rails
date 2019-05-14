@@ -54,7 +54,12 @@ rails db:setup RAILS_ENV=test
 ~~~~
 
 # License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+# Documentation
+Currently GiraffeCMS has not typical documentation. However, you should be able to access automatically generated docs via any GraphQL IDE, like
+* [Graphql Playground](https://github.com/prisma/graphql-playground)
+* [GraphiQL](https://github.com/graphql/graphiql)
 
 # Contributing
 I appreciate every help with the project. Feel free to make pull requests, add issues, or contact me other way to propose changes.
