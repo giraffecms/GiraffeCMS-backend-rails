@@ -9,17 +9,16 @@ RSpec.describe 'createComment mutation', type: :request do
 			}, headers: headers)
 		end
 
-		let!(:post) { create(:post) }
-		let(:input_variables) { {"post": post.id, "title": title, "body": body} }
+		let!(:post_id) { create(:post).id }
+		let(:input_variables) { {"post": post_id, "title": title, "body": body} }
+		let(:title) { "a valid title" }
+		let(:body) { "a valid body" }
 
 		context 'when user is logged' do
 			let!(:user) { create(:user) }
 			let(:headers) { valid_auth_headers }
 
 			context 'when input is valid' do
-				let(:title) { "a valid title" }
-				let(:body) { "a valid body" }
-
 				it 'returns no errors' do
 					errors = json["data"]["createComment"]["errors"]
 					expect(errors).to eq([])
@@ -40,7 +39,7 @@ RSpec.describe 'createComment mutation', type: :request do
 
 					it 'returns valid post' do
 						post = json["data"]["createComment"]["comment"]["post"]["id"]
-						expect(post).to eq(post.id)
+						expect(post).to eq(post_id.to_s)
 					end
 				end
 			end
@@ -55,7 +54,7 @@ RSpec.describe 'createComment mutation', type: :request do
 				end
 
 				it 'does not return comment' do
-					comment = json["data"]["createComment"]["errors"]
+					comment = json["data"]["createComment"]["comment"]
 					expect(comment).to be_nil
 				end
 			end
@@ -66,11 +65,11 @@ RSpec.describe 'createComment mutation', type: :request do
 
 			it 'returns errors' do
 				errors = json["data"]["createComment"]["errors"]
-				expect(errors).not_to be_empty
+				expect(errors).to eq(["You must be logged in to create comment"])
 			end
 
 			it 'does not return comment' do
-				comment = json["data"]["createComment"]["errors"]
+				comment = json["data"]["createComment"]["comment"]
 				expect(comment).to be_nil
 			end
 		end
