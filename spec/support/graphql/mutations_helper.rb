@@ -14,6 +14,10 @@ module GraphQL
 							id
 							title
 							body
+							authors {
+								id
+								username
+							}
 						}
 						errors
 					}

@@ -58,4 +58,9 @@ RSpec.describe User, type: :model do
 			end
 		end
 	end
+
+	describe 'associations' do
+		it { should have_many(:comments) }
+		it { should have_and_belong_to_many(:posts) }
+	end
 end
