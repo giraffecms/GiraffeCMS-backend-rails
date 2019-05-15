@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.com/kuskoman/GiraffeCMS-backend-rails.svg?branch=master)](https://travis-ci.com/kuskoman/GiraffeCMS-backend-rails)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/maintainability)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend-rails/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/test_coverage)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend-rails/test_coverage)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff48f170b1c246c1baa162cb33d3937d)](https://www.codacy.com/app/kuskoman/GiraffeCMS-backend-rails?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kuskoman/GiraffeCMS-backend-rails&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.com/kuskoman/GiraffeCMS-backend.svg?branch=master)](https://travis-ci.com/kuskoman/GiraffeCMS-backend)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/maintainability)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/test_coverage)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend/test_coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff48f170b1c246c1baa162cb33d3937d)](https://www.codacy.com/app/kuskoman/GiraffeCMS-backend?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kuskoman/GiraffeCMS-backend&amp;utm_campaign=Badge_Grade)
 
 # GiraffeCMS Backend
 GiraffeCMS is a simple headless CMS for blogging, written in Ruby on Rails. Unlike most of CMS's, Giraffe uses GraphQL instead of typical RESTful api.
@@ -28,7 +28,7 @@ EDITOR="vim" bin/rails credentials:edit
 ~~~~
 However, if you want to know more about encrypted credentials you can visit for example [this blog post about it](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2).
 
-Required file structrue looks like following:
+Required file content looks like following:
 ~~~~yml
 secret_key_base: 	<base secret key>
 jwt: <secret key used to encode JWT>
