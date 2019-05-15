@@ -3,6 +3,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/test_coverage)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend/test_coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff48f170b1c246c1baa162cb33d3937d)](https://www.codacy.com/app/kuskoman/GiraffeCMS-backend-rails?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kuskoman/GiraffeCMS-backend&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/ff48f170b1c246c1baa162cb33d3937d)](https://www.codacy.com/app/kuskoman/GiraffeCMS-backend-rails?utm_source=github.com&utm_medium=referral&utm_content=kuskoman/GiraffeCMS-backend&utm_campaign=Badge_Coverage)
+[![Known Vulnerabilities](https://snyk.io/test/github/kuskoman/GiraffeCMS-backend/badge.svg)](https://snyk.io/test/github/kuskoman/GiraffeCMS-backend)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # GiraffeCMS Backend
 GiraffeCMS is a simple headless CMS for blogging, written in Ruby on Rails. Unlike most of CMS's, Giraffe uses GraphQL instead of typical RESTful api.
