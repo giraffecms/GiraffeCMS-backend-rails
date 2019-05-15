@@ -14,7 +14,7 @@ jobs:
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: gfcms
-          POSTGRES_DB: gfcms-dev
+          POSTGRES_DB: gfcms-test
           POSTGRES_PASSWORD: ""
     steps:
       - checkout
