@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/kuskoman/GiraffeCMS-backend.svg?branch=master)](https://travis-ci.com/kuskoman/GiraffeCMS-backend)
+[![CircleCI](https://circleci.com/gh/kuskoman/GiraffeCMS-backend.svg?style=shield)](https://circleci.com/gh/kuskoman/GiraffeCMS-backend)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/maintainability)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5365516c3e5989b2d969/test_coverage)](https://codeclimate.com/github/kuskoman/GiraffeCMS-backend/test_coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff48f170b1c246c1baa162cb33d3937d)](https://www.codacy.com/app/kuskoman/GiraffeCMS-backend-rails?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kuskoman/GiraffeCMS-backend&amp;utm_campaign=Badge_Grade)
