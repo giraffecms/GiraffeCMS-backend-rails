@@ -9,20 +9,19 @@ RSpec.describe 'updatePost mutation', type: :request do
 			}, headers: headers)
 		end
 
-		let(:post) { create(:post) }
-		let(:post_id) { post.id }
-		let(:input_variables) { "post": post_id, "title": title }
+		let!(:post_id) { create(:post).id }
+		let(:input_variables) { {"post": post_id, "title": title} }
 		let(:title) { "a valid title" }
 
 		context 'when user is logged' do
 			let(:headers) { valid_auth_headers }
 
 			context 'when user is admin' do
-				let(:user) { create(:admin) }
+				let!(:user) { create(:admin) }
 
 				context 'when input is valid' do
 					it 'updates post' do
-						post_title = json["data"]["createPost"]["post"]["title"]
+						post_title = json["data"]["updatePost"]["post"]["title"]
 						expect(post_title).to eq(title)
 					end
 
@@ -37,7 +36,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 						let(:title) { "" }
 
 						it 'does not return post' do
-							post = json["data"]["createPost"]["post"]
+							post = json["data"]["updatePost"]["post"]
 							expect(post).to be_nil
 						end
 
@@ -51,7 +50,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 						let(:post_id) { 0 }
 
 						it 'does not return post' do
-							post = json["data"]["createPost"]["post"]
+							post = json["data"]["updatePost"]["post"]
 							expect(post).to be_nil
 						end
 
@@ -64,7 +63,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 			end
 
 			context 'when user is not admin' do
-				let(:user) { create(:user) }
+				let!(:user) { create(:user) }
 
 				it 'does not return post' do
 					post = json["data"]["createPost"]["post"]
@@ -73,7 +72,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 
 				it 'returns error' do
 					errors = json["data"]["updatePost"]["errors"]
-					expect(errors).to eq(['You dont have enough permissions to do that'])
+					expect(errors).to eq(['You are not allowed to update posts'])
 				end
 			end
 		end
@@ -88,7 +87,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 
 			it 'returns error' do
 				errors = json["data"]["updatePost"]["errors"]
-				expect(errors).to eq(['You dont have enough permissions to do that'])
+				expect(errors).to eq(['You are not allowed to update posts'])
 			end
 		end
 	end
