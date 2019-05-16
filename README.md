@@ -13,9 +13,9 @@ GiraffeCMS is a simple headless CMS for blogging, written in Ruby on Rails. Unli
 Work on application is currently in progress, so it is not ready to work in production environment, as well as it has not implemented important features. All important relases should be available via tags in the future.
 
 ## Installation
-### Prerequisites:
-* Ruby 2.6.2
-* PostgreSQL
+### Prerequisites
+*  Ruby 2.6.2
+*  PostgreSQL
 
 ### Set up Rails application
 First, you need to install needed gems
@@ -59,17 +59,17 @@ However, if your envirnoment is different than test you may need to make setup f
 rails db:setup RAILS_ENV=test
 ~~~~
 
-# License
+## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-# Documentation
+## Documentation
 Currently GiraffeCMS has not typical documentation. However, you should be able to access automatically generated docs via any GraphQL IDE, like:
-* [Graphql Playground](https://github.com/prisma/graphql-playground)
-* [GraphiQL](https://github.com/graphql/graphiql)
+*  [Graphql Playground](https://github.com/prisma/graphql-playground)
+*  [GraphiQL](https://github.com/graphql/graphiql)
 
-# Contributing
+## Contributing
 I appreciate every help with the project. Feel free to make pull requests, add issues, or contact me other way to suggest changes.
 
-# About
+## About
 
 This project is created in learning purposes.
