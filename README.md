@@ -14,8 +14,8 @@ Work on application is currently in progress, so it is not ready to work in prod
 
 ## Installation
 ### Prerequisites
-*  Ruby 2.6.2
-*  PostgreSQL
+*   Ruby 2.6.2
+*   PostgreSQL
 
 ### Set up Rails application
 First, you need to install needed gems
@@ -64,8 +64,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Documentation
 Currently GiraffeCMS has not typical documentation. However, you should be able to access automatically generated docs via any GraphQL IDE, like:
-*  [Graphql Playground](https://github.com/prisma/graphql-playground)
-*  [GraphiQL](https://github.com/graphql/graphiql)
+*   [Graphql Playground](https://github.com/prisma/graphql-playground)
+*   [GraphiQL](https://github.com/graphql/graphiql)
 
 ## Contributing
 I appreciate every help with the project. Feel free to make pull requests, add issues, or contact me other way to suggest changes.
