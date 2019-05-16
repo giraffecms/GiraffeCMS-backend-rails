@@ -23,7 +23,7 @@ module Mutations
 			def update_post(post_id, title, body)
 				post = Post.find(post_id)
 				attributes = {title: title, body: body}
-				post.update(attributes.delete_if { |k, v| v.nil? })
+				post.update(attributes.delete_if { |_, v| v.nil? })
 
 				if post.save
 					{
