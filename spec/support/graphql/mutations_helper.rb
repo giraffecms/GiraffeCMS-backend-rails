@@ -28,15 +28,15 @@ module GraphQL
 		def update_post_mutation
 			%(
 				mutation UpdatePost(
-					$post: ID!
+					$post: ID!,
 					$title: String,
 					$body: String,
 				) {
 					updatePost(input: {
-						post:$post,
-						title:$title,
-						body:$body,
-					}) {
+				    post:$post,
+				    title:$title,
+				    body:$body,
+				  }) {
 						post {
 							title
 							body

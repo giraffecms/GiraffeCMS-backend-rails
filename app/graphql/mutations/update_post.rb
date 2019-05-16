@@ -26,7 +26,6 @@ module Mutations
 				post.update(attributes.delete_if { |k, v| v.nil? })
 
 				if post.save
-					context[:current_user].posts << post
 					{
 						post: post,
 						errors: [],

@@ -4,7 +4,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 	describe 'post update' do
 		before do
 			post('/graphql', params: {
-			 query: create_comment_mutation,
+			 query: update_post_mutation,
 			 variables: input_variables,
 			}, headers: headers)
 		end
@@ -42,21 +42,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 
 						it 'returns error' do
 							errors = json["data"]["updatePost"]["errors"]
-							expect(errors).to eq(['Invalid input'])
-						end
-					end
-
-					context 'when post id is invalid' do
-						let(:post_id) { 0 }
-
-						it 'does not return post' do
-							post = json["data"]["updatePost"]["post"]
-							expect(post).to be_nil
-						end
-
-						it 'returns error' do
-							errors = json["data"]["updatePost"]["errors"]
-							expect(errors).to eq(['ID is invalid'])
+							expect(errors).to eq(['Title can\'t be blank'])
 						end
 					end
 				end
@@ -66,7 +52,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 				let!(:user) { create(:user) }
 
 				it 'does not return post' do
-					post = json["data"]["createPost"]["post"]
+					post = json["data"]["updatePost"]["post"]
 					expect(post).to be_nil
 				end
 
@@ -81,7 +67,7 @@ RSpec.describe 'updatePost mutation', type: :request do
 			let(:headers) { {} }
 
 			it 'does not return post' do
-				post = json["data"]["createPost"]["post"]
+				post = json["data"]["updatePost"]["post"]
 				expect(post).to be_nil
 			end
 
