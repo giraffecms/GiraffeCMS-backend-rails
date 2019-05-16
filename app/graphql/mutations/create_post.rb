@@ -6,7 +6,7 @@ module Mutations
 		field :post, Types::PostType, null: true
 		field :errors, [String], null: false
 
-		def resolve(title: nil, body: nil)
+		def resolve(title:, body:)
 			if context[:current_user].try(:admin?)
 				create_post(title, body)
 			else

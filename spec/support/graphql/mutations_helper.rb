@@ -25,6 +25,28 @@ module GraphQL
 			)
 		end
 
+		def update_post_mutation
+			%(
+				mutation UpdatePost(
+					$post: ID!,
+					$title: String,
+					$body: String,
+				) {
+					updatePost(input: {
+				    post:$post,
+				    title:$title,
+				    body:$body,
+				  }) {
+						post {
+							title
+							body
+						}
+						errors
+					}
+				}
+			)
+		end
+
 		def create_user_mutation
 			%(
 				mutation CreateUser(
