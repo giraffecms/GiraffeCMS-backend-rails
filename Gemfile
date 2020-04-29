@@ -21,9 +21,9 @@ group :test do
 	gem 'shoulda-matchers', '~> 3.1', '>= 3.1.3'
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'database_cleaner', '~> 1.7'
-  gem 'simplecov', require: false
-  gem 'simplecov-console', require: false
-  gem 'codacy-coverage', :require => false
+  gem 'simplecov', '>= 0.16.1', require: false
+  gem 'simplecov-console', '>= 0.4.2', require: false
+  gem 'codacy-coverage', '>= 2.1.0', :require => false
 end
 
 group :development do
